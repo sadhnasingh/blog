@@ -1,0 +1,15 @@
+ <strong>Title:</strong>
+  <%= @blogger.title %>
+</p>
+ 
+<p>
+  <strong>Text:</strong>
+  <%= @blogger.text %>
+</p>
+ 
+<h2>Comments</h2>
+<%= render @blogger.comments %>
+ 
+ 
+<%= link_to 'Edit', edit_blogger_path(@blogger) %> |
+<%= link_to 'Back', bloggers_path %>

@@ -1,0 +1,13 @@
+
+ 
+<p>
+  <strong>Reply:</strong>
+  <%= reply.body %>
+</p>
+
+
+<p>
+  <%= link_to 'Destroy Reply', [comment.blogger, comment],
+               method: :delete,
+               data: { confirm: 'Are you sure?' } %>
+</p>

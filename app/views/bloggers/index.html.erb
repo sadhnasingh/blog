@@ -1,0 +1,21 @@
+<h1>Listing bloggers</h1>
+<%= link_to 'new blog', new_blogger_path(@blogger) %>
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Text</th>
+    <th colspan="2"></th>
+  </tr>
+ 
+  <% @bloggers.each do |blogger| %>
+    <tr>
+      <td><%= blogger.title %></td>
+      <td><%= blogger.text %></td>
+      <td><%= link_to 'Show', blogger_path(blogger) %></td>
+      <td><%= link_to 'Edit', edit_blogger_path(blogger) %></td>
+      <td><%= link_to 'Destroy', blogger_path(blogger),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
+</table>

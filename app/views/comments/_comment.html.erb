@@ -1,0 +1,15 @@
+<p>
+  <strong>Commenter:</strong>
+  <%= comment.commenter %>
+</p>
+ 
+<p>
+  <strong>Comment:</strong>
+  <%= comment.body %>
+</p>
+
+	<%#= link_to 'Reply', new_blogger_comment_reply_path(comment.blogger, comment) %> 
+  <%= render "replies/form",comment: comment %>
+  <%= link_to 'Destroy Comment', [comment.blogger, comment],
+               method: :delete,
+               data: { confirm: 'Are you sure?' } %>
